@@ -1,0 +1,18 @@
+<Context path="/jspboard" docBase="www"> <!--프로젝트 이름 작성 ,웹 콘텐즈인것을 알리기 위해 작성  -->
+<!-- jdbc연결하기 위한 준비 -->
+<Resource 
+	name="jdbc/odbo"
+	auth="Container"
+	type="javax.sql.DataSource"
+	driverClassName="com.mysql.jdbc.Driver"
+	loginTimeout="10"
+	validationQuery="SELECT 1 FROM DUAL"
+	maxWait="5000"
+	username="root"
+	password="1234"
+	testOnBorrow="true"
+	url="jdbc:mysql://localhost:3306/odbo?serverTimezone=Asia/Seoul"/>
+<ResourceLink type="javax.sql.data.DataSource"
+	name="jdbc/odbo"
+	global="jdbc/odbo"/>
+</Context>
